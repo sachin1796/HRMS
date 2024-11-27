@@ -3,9 +3,10 @@
 import './App.css'
 import {LoginForm} from './components/LoginPage/LoginForm'
 import { SocialLogin } from './components/LoginPage/SocialLogin'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Settings2 } from 'lucide-react';
 
 import React from 'react';
-import { Settings2 } from 'lucide-react';
 import WelcomeCard from './components/EmployeeDashboard/WelcomeCard';
 import StatisticsCard from './components/EmployeeDashboard/StatisticsCard';
 import HolidaysCard from './components/EmployeeDashboard/HolidaysCard';
@@ -14,11 +15,20 @@ import NotificationsCard from './components/EmployeeDashboard/NotificationsCard'
 import ProjectsCard from './components/EmployeeDashboard/ProjectsCard';
 import EmployeeCard from './components/EmployeeDashboard/EmployeeCard';
 import PolicyCard from './components/EmployeeDashboard/PolicyCard';
+import Layout from './components/Layout';
+import Overview  from './pages/Overview'
+import Attendance from './pages/Attendance'
+import Payroll from './pages/Payroll'
+import Tasks from './pages/Tasks'
+import CustomDashboard from './pages/CustomDashboard'
+
+
 // >>>>>>> c21d0eb78ee51806047128e80a5ec7128c94f799
 
 function App() {
   return (
-// <<<<<<< HEAD
+    
+     // <<<<<<< HEAD
     // <>
     // <h1>
     //   Welcome to HRMS</h1></>
@@ -49,8 +59,9 @@ function App() {
 //     </div>
   
 //    </>
-  // )
-// =======
+  // )
+// =======
+    <>
     <div className="min-h-screen bg-gray-50 p-4 md:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto space-y-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -73,7 +84,20 @@ function App() {
           <Settings2 size={24} />
         </button>
       </div>
+      
     </div>
+    <Router>
+      <Routes>
+          <Route path="/" element={<Layout/>}>
+          <Route index element={<Overview/>} />
+          <Route path="attendance" element={<Attendance />} />
+          <Route path="payroll" element={<Payroll />} />
+          <Route path="tasks" element={<Tasks />} />
+          <Route path="custom-dashboard" element={<CustomDashboard />} />
+        </Route>
+      </Routes>
+    </Router>
+    </>
   );
 // >>>>>>> c21d0eb78ee51806047128e80a5ec7128c94f799
 }
