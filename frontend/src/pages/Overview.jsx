@@ -5,6 +5,11 @@ import {
   DollarSignIcon, 
   FileTextIcon 
 } from 'lucide-react';
+import Landing from '../components/AdminDashboard/Landing'
+import StatisticsPage from '../components/AdminDashboard/Statistics';
+import InvoicesPaymentsPage from '../components/AdminDashboard/Invoice';
+import Clients from '../components/AdminDashboard/Clients';
+import ExpensesPage from '../components/AdminDashboard/Expenses';
 
 const OverviewCard = ({ title, description, icon: Icon, bgColor }) => (
   <div 
@@ -62,21 +67,27 @@ const Overview = () => {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mt-20">
       <div className="bg-white shadow-sm rounded-lg p-6">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Dashboard Overview
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">
+          Admin Dashboard
         </h1>
-        <p className="text-gray-600">
-          Welcome to your personal HRMS dashboard. Get a quick overview of your work metrics.
-        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {overviewCards.map((card, index) => (
           <OverviewCard key={index} {...card} />
         ))}
-      </div>
+      </div> */}
+      <Landing />
+
+      <ExpensesPage />
+
+      <StatisticsPage />
+
+      <InvoicesPaymentsPage />
+
+      <Clients />
     </div>
   );
 };

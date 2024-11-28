@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff, LogIn } from 'lucide-react';
 import { InputField } from './InputField';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 export function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Initialize the useNavigate hook
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Replace this with actual authentication logic
     console.log('Login attempted with:', { email, password });
+
+    // If login is successful, navigate to the dashboard
+    navigate('/overview');  // This will redirect to the Dashboard page
   };
 
   return (

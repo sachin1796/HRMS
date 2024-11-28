@@ -32,7 +32,7 @@ const Payroll = () => {
   const availableMonths = Array.from({ length: 12 }, (_, i) => i + 1); // 1 to 12
 
   return (
-    <div className="p-6 max-w-lg mx-auto bg-white rounded-lg shadow-md">
+    <div className="p-6 max-w-lg mx-auto bg-white rounded-lg shadow-md mt-10">
       <h1 className="text-2xl font-bold mb-4">Payroll</h1>
       <div className="mb-4">
         <label className="block text-lg font-medium mb-2">Select Year:</label>

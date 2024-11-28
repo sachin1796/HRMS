@@ -93,7 +93,7 @@ const Attendance = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mt-10">
       <div className="bg-white shadow-sm rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-3xl font-bold text-gray-800 flex items-center">
