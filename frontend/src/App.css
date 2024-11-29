@@ -41,6 +41,7 @@
   color: #888;
 } */
 
+<<<<<<< HEAD
 
 /* Custom Scrollbar for Sidebar and Main Content */
 ::-webkit-scrollbar {
@@ -76,3 +77,5 @@
     width: 6px; /* Thinner scrollbar on mobile */
   }
 }
+=======
+>>>>>>> 847334e61a7f7988e9617cf97b618da8399a4f1a
