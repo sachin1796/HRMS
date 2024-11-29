@@ -1,6 +1,6 @@
 import React from "react";
 
-const Performance = () => {
+const PerformanceIndicator = () => {
   const employeePerformance = [
     { month: "January", score: 85 },
     { month: "February", score: 90 },
@@ -52,4 +52,4 @@ const Performance = () => {
   );
 };
 
-export default Performance;
+export default PerformanceIndicator;
