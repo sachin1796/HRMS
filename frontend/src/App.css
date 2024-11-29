@@ -41,7 +41,11 @@
   color: #888;
 } */
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> ef71be341e19fab71fa0cd03109c3377c45419f8
 
 /* Custom Scrollbar for Sidebar and Main Content */
 ::-webkit-scrollbar {
@@ -77,3 +81,8 @@
     width: 6px; /* Thinner scrollbar on mobile */
   }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 847334e61a7f7988e9617cf97b618da8399a4f1a
+>>>>>>> ef71be341e19fab71fa0cd03109c3377c45419f8
