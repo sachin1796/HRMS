@@ -19,21 +19,6 @@ const Layout = () => {
 
   const navItems = [
     { 
-      name: 'Attendance', 
-      path: '/attendance', 
-      icon: <CalendarCheckIcon className="w-5 h-5 mr-3" /> 
-    },
-    { 
-      name: 'Client', 
-      path: '/client', 
-      icon: <CalendarCheckIcon className="w-5 h-5 mr-3" /> 
-    },
-    { 
-      name: 'Performance', 
-      path: '/performance', 
-      icon: <CalendarCheckIcon className="w-5 h-5 mr-3" /> 
-    },
-    { 
       name: 'Payroll', 
       path: '/payroll', 
       icon: <DollarSignIcon className="w-5 h-5 mr-3" /> 
@@ -51,7 +36,7 @@ const Layout = () => {
 
   return (
     <>
-      <div className="flex h-screen bg-gray-900">
+      <div className="flex h-screen bg-gray-900 overflow-hidden">
         {/* Sidebar Toggle Button */}
         <button 
           className="fixed top-4 left-4 z-50 md:hidden"
@@ -62,12 +47,10 @@ const Layout = () => {
 
         {/* Sidebar */}
         <aside 
-          className={`
-            fixed inset-y-0 left-0 z-40 w-64 bg-gray-900 shadow-xl 
+          className={`fixed inset-y-0 left-0 z-40 w-64 bg-gray-900 shadow-xl 
             transform transition-transform duration-300 ease-in-out
             ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
-            md:relative md:translate-x-0
-          `}
+            md:relative md:translate-x-0 overflow-y-auto`}
         >
           <div className="flex items-center justify-center h-20 shadow-md">
             <Link to="/overview" className="text-3xl font-bold text-orange-600">HRMS</Link>
@@ -197,6 +180,78 @@ const Layout = () => {
                     onClick={() => setIsSidebarOpen(false)}
                   >
                     Tasks
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* CRM Dropdown */}
+            <div>
+              <button
+                className="flex items-center w-full px-6 py-4 text-gray-400 
+                hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 
+                border-l-4 border-transparent hover:border-blue-500"
+                onClick={() => toggleDropdown('crm')}
+              >
+                <ClipboardListIcon className="w-5 h-5 mr-3" />
+                CRM
+                {activeDropdown === 'crm' ? (
+                  <ChevronUpIcon className="ml-auto w-5 h-5" />
+                ) : (
+                  <ChevronDownIcon className="ml-auto w-5 h-5" />
+                )}
+              </button>
+
+              {/* CRM Dropdown Menu */}
+              {activeDropdown === 'crm' && (
+                <div className="ml-6">
+                  <Link 
+                    to="/contact" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Contacts
+                  </Link>
+                  <Link 
+                    to="/companies" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Companies
+                  </Link>
+                  <Link 
+                    to="/leads" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Leads
+                  </Link>
+                  <Link 
+                    to="/pipeline" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Pipeline
+                  </Link>
+                  <Link 
+                    to="/analytics" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Analytics
+                  </Link>
+                  <Link 
+                    to="/activities" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Activities
                   </Link>
                 </div>
               )}

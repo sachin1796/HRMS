@@ -24,6 +24,13 @@ import Navbar from './components/Navbar';
 import ExpensesPage from './components/AdminDashboard/Expenses';
 import Client from './pages/Client';
 import Performance from './pages/Performance';
+import TableComponent from './pages/Contact';
+import Companies from './pages/Companies';
+import Deals from './pages/Deals';
+import Leads from './pages/Leads';
+import Pipeline from './pages/Pipeline';
+import Activities from './pages/Activities';
+import Analytics from './pages/Analytics';
 
 
 
@@ -53,6 +60,13 @@ function App() {
           <Route path="email" element={<EmailPage />} />
           <Route path="projects" element={<ProjectPage />} />
           <Route path="attendance" element={<Attendance />} />
+          <Route path="contact" element={<TableComponent />} />
+          <Route path="companies" element={<Companies />} />
+          <Route path="deals" element={<Deals />} />
+          <Route path="leads" element={<Leads />} />
+          <Route path="pipeline" element={<Pipeline />} />
+          <Route path="activities" element={<Activities />} />
+          <Route path="analytics" element={<Analytics />} />
           <Route path="client" element={<Client />} />
           <Route path="performance" element={<Performance />} />
           <Route path="payroll" element={<Payroll />} />
