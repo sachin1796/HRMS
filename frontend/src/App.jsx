@@ -24,6 +24,8 @@ import Navbar from './components/Navbar';
 import ExpensesPage from './components/AdminDashboard/Expenses';
 import Client from './pages/Client';
 import Performance from './pages/Performance';
+import TicketDashboard from './pages/Ticket';
+import TicketDetail from './pages/TicketDetail';
 
 
 
@@ -53,6 +55,8 @@ function App() {
           <Route path="email" element={<EmailPage />} />
           <Route path="projects" element={<ProjectPage />} />
           <Route path="attendance" element={<Attendance />} />
+          <Route path="ticket" element={<TicketDashboard />} />
+          <Route path="ticket-detail" element={<TicketDetail />} />
           <Route path="client" element={<Client />} />
           <Route path="performance" element={<Performance />} />
           <Route path="payroll" element={<Payroll />} />

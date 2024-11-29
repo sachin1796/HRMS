@@ -24,6 +24,16 @@ const Layout = () => {
       icon: <CalendarCheckIcon className="w-5 h-5 mr-3" /> 
     },
     { 
+      name: 'Ticket', 
+      path: '/ticket', 
+      icon: <CalendarCheckIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'Ticket-Detail', 
+      path: '/ticket-detail', 
+      icon: <CalendarCheckIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
       name: 'Client', 
       path: '/client', 
       icon: <CalendarCheckIcon className="w-5 h-5 mr-3" /> 
