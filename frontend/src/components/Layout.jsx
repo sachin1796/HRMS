@@ -19,8 +19,13 @@ const Layout = () => {
 
   const navItems = [
     { 
-      name: 'Attendance', 
-      path: '/attendance', 
+      name: 'Attendance (Employee)', 
+      path: '/employeeattendance', 
+      icon: <CalendarCheckIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'Attendance (Admin)', 
+      path: '/adminattendance', 
       icon: <CalendarCheckIcon className="w-5 h-5 mr-3" /> 
     },
     { 
@@ -42,7 +47,57 @@ const Layout = () => {
       name: 'Custom Dashboard', 
       path: '/custom-dashboard', 
       icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
-    }
+    },
+    { 
+      name: 'Sales', 
+      path: '/sale', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'OvertimeTracker', 
+      path: '/overtime', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'DailyScheduling', 
+      path: '/dailyscheduling', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'TimeSheet', 
+      path: '/timesheet', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'LeaveSystem', 
+      path: '/leavesystem', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'AdminLeaveSystem', 
+      path: '/adminleaveportal', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'AllEmployee', 
+      path: '/allemployee', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'Departments', 
+      path: '/department', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'Designations', 
+      path: '/designations', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
+    { 
+      name: 'Holiday', 
+      path: '/holiday', 
+      icon: <LayoutGridIcon className="w-5 h-5 mr-3" /> 
+    },
   ];
 
   const toggleDropdown = (dropdownName) => {
@@ -114,129 +169,129 @@ const Layout = () => {
               )}
             </div>
 
-            {/* Apps Dropdown */}
+            {/* Employees Dropdown */}
             <div>
               <button
                 className="flex items-center w-full px-6 py-4 text-gray-400 
                 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 
                 border-l-4 border-transparent hover:border-blue-500"
-                onClick={() => toggleDropdown('apps')}
+                onClick={() => toggleDropdown('employees')}
               >
-                <LayoutGridIcon className="w-5 h-5 mr-3" />
-                Apps
-                {activeDropdown === 'apps' ? (
+                <ClipboardListIcon className="w-5 h-5 mr-3" />
+                Employees
+                {activeDropdown === 'employees' ? (
                   <ChevronUpIcon className="ml-auto w-5 h-5" />
                 ) : (
                   <ChevronDownIcon className="ml-auto w-5 h-5" />
                 )}
               </button>
 
-              {/* Apps Dropdown Menu */}
-              {activeDropdown === 'apps' && (
+              {/* Employees Dropdown Menu */}
+              {activeDropdown === 'employees' && (
                 <div className="ml-6">
+                  {/* Add Attendance Links */}
                   <Link 
-                    to="/chat" 
+                    to="/employeeattendance" 
                     className="block px-6 py-2 text-gray-400 
                       hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
                     onClick={() => setIsSidebarOpen(false)}
                   >
-                    Chat
+                    Attendance (Employee)
                   </Link>
                   <Link 
-                    to="/email" 
+                    to="/adminattendance" 
                     className="block px-6 py-2 text-gray-400 
                       hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
                     onClick={() => setIsSidebarOpen(false)}
                   >
-                    Email
+                    Attendance (Admin)
+                  </Link>
+
+                  {/* Existing Links */}
+                  <Link 
+                    to="/overtime" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Overtime Tracker
                   </Link>
                   <Link 
-                    to="/events" 
+                    to="/dailyscheduling" 
                     className="block px-6 py-2 text-gray-400 
                       hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
                     onClick={() => setIsSidebarOpen(false)}
                   >
-                    Calendar
+                    Daily Scheduling
+                  </Link>
+                  <Link 
+                    to="/timesheet" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Time Sheet
+                  </Link>
+                  <Link 
+                    to="/leavesystem" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Leave System
+                  </Link>
+                  <Link 
+                    to="/adminleaveportal" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Admin Leave System
+                  </Link>
+                  <Link 
+                    to="/allemployee" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    All Employees
+                  </Link>
+                  {/* Added new links for Holiday, Designations, and Departments */}
+                  <Link 
+                    to="/holiday" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Holiday
+                  </Link>
+                  <Link 
+                    to="/designations" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Designations
+                  </Link>
+                  <Link 
+                    to="/department" 
+                    className="block px-6 py-2 text-gray-400 
+                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    Departments
                   </Link>
                 </div>
               )}
             </div>
-
-            {/* Project Dropdown */}
-            <div>
-              <button
-                className="flex items-center w-full px-6 py-4 text-gray-400 
-                hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 
-                border-l-4 border-transparent hover:border-blue-500"
-                onClick={() => toggleDropdown('projects')}
-              >
-                <LayoutGridIcon className="w-5 h-5 mr-3" />
-                Project
-                {activeDropdown === 'projects' ? (
-                  <ChevronUpIcon className="ml-auto w-5 h-5" />
-                ) : (
-                  <ChevronDownIcon className="ml-auto w-5 h-5" />
-                )}
-              </button>
-
-              {/* Project Dropdown Menu */}
-              {activeDropdown === 'projects' && (
-                <div className="ml-6">
-                  <Link 
-                    to="/projects" 
-                    className="block px-6 py-2 text-gray-400 
-                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
-                    onClick={() => setIsSidebarOpen(false)}
-                  >
-                    Projects
-                  </Link>
-                  <Link 
-                    to="/tasks" 
-                    className="block px-6 py-2 text-gray-400 
-                      hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
-                    onClick={() => setIsSidebarOpen(false)}
-                  >
-                    Tasks
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            {/* Other navigation items */}
-            {navItems.map((item) => (
-              <Link 
-                key={item.path} 
-                to={item.path}
-                className="flex items-center px-6 py-4 text-gray-400 
-                hover:bg-blue-50 hover:text-blue-600 
-                transition-colors duration-200 
-                border-l-4 border-transparent 
-                hover:border-blue-500"
-                onClick={() => setIsSidebarOpen(false)}
-              >
-                {item.icon}
-                {item.name}
-              </Link>
-            ))}
           </nav>
         </aside>
-
-        {/* Background overlay when sidebar is open */}
-        {isSidebarOpen && (
-          <div 
-            className="fixed inset-0 bg-black opacity-50 z-30 md:hidden"
-            onClick={() => setIsSidebarOpen(false)}
-          />
-        )}
-
-        <main className="flex-1 overflow-y-auto p-6 md:p-10 bg-gray-100 z-10">
+        
+        {/* Main Content */}
+        <div className="flex-1 p-6 bg-gray-100">
+          <Navbar />
           <Outlet />
-        </main>
-      </div>
-
-      {/* Navbar */}
-      <div className="fixed inset-x-0 top-0 z-20">
-        <Navbar />
+        </div>
       </div>
     </>
   );

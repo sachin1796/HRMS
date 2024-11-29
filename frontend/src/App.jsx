@@ -10,7 +10,7 @@ import React from 'react';
 
 import Layout from './components/Layout';
 import Overview  from './pages/Overview'
-import Attendance from './pages/Attendance'
+import Attendance from './pages/EmployeeAttendance '
 import Payroll from './pages/Payroll'
 import Tasks from './pages/Tasks'
 import CustomDashboard from './pages/CustomDashboard'
@@ -24,6 +24,20 @@ import Navbar from './components/Navbar';
 import ExpensesPage from './components/AdminDashboard/Expenses';
 import Client from './pages/Client';
 import Performance from './pages/Performance';
+import OvertimeTracker from './pages/OvertimeTracker';
+import DailyScheduling from './pages/DailyScheduling';
+import TimeSheet from './pages/TimeSheet';
+import LeaveSystem from './pages/LeaveSystem';
+import Sale from './pages/Sales';
+import { Import } from 'lucide-react';
+import AdminLeavePortal from './pages/AdminLeavePortal';
+import AllEmployeesPage from './pages/AllEmployees';
+import Department from './pages/Department';
+import Designations from './pages/Designations';
+import Holiday from './pages/Holiday';
+import EmployeeAttendance from './pages/EmployeeAttendance ';
+import AdminAttendance from './pages/AdminAttendance';
+
 
 
 
@@ -52,12 +66,23 @@ function App() {
           <Route path="events" element={<Calendar />} />
           <Route path="email" element={<EmailPage />} />
           <Route path="projects" element={<ProjectPage />} />
-          <Route path="attendance" element={<Attendance />} />
+          <Route path="employeeattendance" element={<EmployeeAttendance />} />
+          <Route path="adminattendance" element={<AdminAttendance />} />
           <Route path="client" element={<Client />} />
           <Route path="performance" element={<Performance />} />
           <Route path="payroll" element={<Payroll />} />
           <Route path="tasks" element={<Tasks />} />
           <Route path="custom-dashboard" element={<CustomDashboard />} />
+          <Route path="/overtime" element={<OvertimeTracker />} />
+          <Route path="/dailyscheduling" element={<DailyScheduling />} />
+          <Route path="/timesheet" element={<TimeSheet />} />
+          <Route path="/leavesystem" element={<LeaveSystem />} />
+          <Route path="/adminleaveportal" element={<AdminLeavePortal />} />
+          <Route path="/allemployee" element={<AllEmployeesPage />} />
+          <Route path="/department" element={<Department />} />
+          <Route path="/designations" element={<Designations />} />
+          <Route path="/holiday" element={<Holiday />} />
+          <Route path="/sale" element={<Sale />} />
           </Route>
       </Routes>
     </Router>
